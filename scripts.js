@@ -6,14 +6,21 @@ function loadTodos() {
         .then(todos => {
             console.log(todos); // Ausgabe zur Kontrolle in der Konsole
 
-            const todoList = document.getElementById('todoList'); // Zugriff auf die UL-Liste
-            todoList.innerHTML = ''; // Liste leeren, bevor neue Einträge hinzugefügt werden
+            const todoList = document.getElementById('todoList'); // Zugriff auf die UL-Liste --> unsortierte Liste
+            const todoListOrdered = document.getElementById('todoListOrdered'); // Zugriff auf die OL-Liste --> sortierte Liste (NEU)
+
+            todoList.innerHTML = ''; // 1. Liste leeren, bevor neue Einträge hinzugefügt werden
+            todoListOrdered.innerHTML = '';todoListOrdered.innerHTML = ''; // 2. Liste leeren, bevor neue Einträge hinzugefügt werden (NEU)
 
             // Alle Todos durchgehen und in die Liste einfügen
             todos.forEach(todo => {
-                const li = document.createElement('li'); // Neuen Listeneintrag erstellen
+                const li = document.createElement('li'); // Listenelement für 1. Liste erstellen
                 li.textContent = todo; // Textinhalt des Todos setzen
                 todoList.appendChild(li); // Eintrag zur Liste hinzufügen
+
+                const li2 = document.createElement('li'); // Listenelement für 2. Liste erstellen (NEU)
+                li2.textContent = todo; // Textinhalt des Todos setzen (NEU)
+                todoListOrdered.appendChild(li2); // Eintrag zur Liste hinzufügen (NEU)
             });
         });
 }
