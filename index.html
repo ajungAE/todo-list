@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-Liste</title>
+    <meta charset="UTF-8"> <!-- Zeichencodierung auf UTF-8 setzen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Design ermöglichen -->
+    <title>Todo-Liste</title> <!-- Titel im Browser-Tab -->
 </head>
 <body>
-    <h1>Meine TODO-Liste</h1>
+    <h1>Meine TODO-Liste</h1> <!-- Hauptüberschrift -->
+
+    <!-- Formular zur Eingabe neuer Todo-Einträge -->
     <form id="todoForm">
-        <input type="text" id="todoInput" placeholder="Neuer Eintrag">
-        <button type="submit">Hinzufügen</button>
+        <input type="text" id="todoInput" placeholder="Neuer Eintrag"> <!-- Texteingabe für neue Aufgabe -->
+        <button type="submit">Hinzufügen</button> <!-- Button zum Abschicken des Formulars -->
     </form>
+
+    <!-- Liste zur Anzeige der Todos -->
     <ul id="todoList"></ul>
- 
+
+    <!-- JavaScript einbinden -->
     <script src="scripts.js"></script>
 </body>
 </html>
