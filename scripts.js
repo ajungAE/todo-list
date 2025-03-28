@@ -10,7 +10,7 @@ function loadTodos() {
             const todoListOrdered = document.getElementById('todoListOrdered'); // Zugriff auf die OL-Liste --> sortierte Liste (NEU)
 
             todoList.innerHTML = ''; // 1. Liste leeren, bevor neue Einträge hinzugefügt werden
-            todoListOrdered.innerHTML = '';todoListOrdered.innerHTML = ''; // 2. Liste leeren, bevor neue Einträge hinzugefügt werden (NEU)
+            todoListOrdered.innerHTML = ''; // 2. Liste leeren, bevor neue Einträge hinzugefügt werden (NEU)
 
             // Alle Todos durchgehen und in die Liste einfügen
             todos.forEach(todo => {
